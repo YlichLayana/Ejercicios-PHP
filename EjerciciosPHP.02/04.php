@@ -14,6 +14,25 @@
         formato:
         Nota definir los valores 50 y 100 como constantes en PHP (define)</h2>
 
+    <?php
+    $valor1 = random_int(1, 100);
+    $valor2 = random_int(1, 100);
+
+    $min;
+    $max;
+    $media;
+
+    if ($valor1 > $valor2) {
+        $max = $valor1;
+        $min = $valor2;
+    } else {
+        $max = $valor2;
+        $min = $valor1;
+    }
+
+    $media=($valor1+$valor2)/2;
+
+    ?>
     <table>
         <tr>
             <th colspan="2" ;>Generación de 50 valores aletorios</th>
@@ -21,17 +40,17 @@
 
         <tr>
             <td><?= "Minimo" ?></td>
-            <td> <?= "2" ?> </td>
+            <td> <?= $min ?> </td>
         </tr>
 
         <tr>
             <td><?= "Máximo" ?></td>
-            <td><?= "82" ?> </td>
+            <td><?= $max ?> </td>
         </tr>
 
         <tr>
             <td><?= "Media" ?></td>
-            <td><?= "45" ?> </td>
+            <td><?= $media ?> </td>
         </tr>
 
     </table>
