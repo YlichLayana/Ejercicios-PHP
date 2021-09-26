@@ -6,7 +6,8 @@ function CreaMuralla($valor)
         for ($columna = 1; $columna <= $valor * 5 - 1; $columna++) {
             if ($fila == 1 || $fila == 2) {
                 if ($columna % 5 == 0) {
-                    echo "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp";
+                    //echo "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp" . "&nbsp";
+                    echo '<img src="./Imagenes/psicologia-del-color-blanco.png" width=50" height="45">' . " ";
                 } else
                     echo '<img src="./Imagenes/ladrillo.png" width=50" height="45">' . " ";
             } else
