@@ -1,10 +1,11 @@
 <?php
 
-function generarHTMLTable ( $filas, $columnas, $borde,$contenido){
+function generarHTMLTable($filas, $columnas, $borde, $contenido)
+{
     echo "<table border=$borde>";
-    for($fila=1; $fila<=$filas; $fila++){
+    for ($fila = 1; $fila <= $filas; $fila++) {
         echo "<tr>";
-        for($columna=1; $columna<=$columnas; $columna++){
+        for ($columna = 1; $columna <= $columnas; $columna++) {
             echo "<td>  $contenido</td>";
         }
         echo "</tr>";
@@ -30,13 +31,13 @@ function generarHTMLTable ( $filas, $columnas, $borde,$contenido){
     </h2>
 
     <?php
-        $cantFilas= 5;
-        $cantColumas=4 ;
-        $bordes=4;
-        $contenido="Ylich";
+    $cantFilas = 5;
+    $cantColumas = 4;
+    $bordes = 4;
+    $contenido = "Ylich";
 
-        generarHTMLTable($cantFilas, $cantColumas, $bordes, $contenido)
-    ?>    
+    generarHTMLTable($cantFilas, $cantColumas, $bordes, $contenido)
+    ?>
 
 </body>
 
