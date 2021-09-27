@@ -1,7 +1,6 @@
 <?php
 
-
-function generarHTMLTable($filas, $columnas,  $contenidoColor)
+function generarHTMLTable($filas, $columnas)
 {
    
     echo "<table border=2>";
@@ -9,14 +8,59 @@ function generarHTMLTable($filas, $columnas,  $contenidoColor)
         echo "<tr>";
         for ($columna = 1; $columna <= $columnas; $columna++) {
             
-            echo "<td> &nbsp $contenidoColor</td>";
+            echo "<td> &nbsp </td>";
         }
         echo "</tr>";
     }
     echo "</table>";
 }
+?> 
+
+<?php
+function randomColor()
+{
+    $str = "#";
+    for ($i = 0; $i < 6; $i++) {
+        $randNum = rand(0, 15);
+        switch ($randNum) {
+            case 10:
+                $randNum = "A";
+                break;
+            case 11:
+                $randNum = "B";
+                break;
+            case 12:
+                $randNum = "C";
+                break;
+            case 13:
+                $randNum = "D";
+                break;
+            case 14:
+                $randNum = "E";
+                break;
+            case 15:
+                $randNum = "F";
+                break;
+        }
+        $str .= $randNum;
+    }
+    return $str;
+}
 
 ?>
+
+<style>
+    table {
+        width: 50%;
+        height: 100%;
+        border: 1px solid #000;
+    }
+
+    td {
+        border: 1px solid #000;
+        background-color: <?php echo randomColor(); ?>;
+    }
+</style>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,12 +73,8 @@ function generarHTMLTable($filas, $columnas,  $contenidoColor)
 <body>
 <?php
      
-    $colores = array("rojo", "azul", "amarillo", "verde", "negro", "blanco");        
-    $seleccionad= $colores[array_rand($colores)]; 
-    echo $seleccionad;
-    
 
-    generarHTMLTable(5, 5,  $seleccionad)
+    generarHTMLTable(5, 5)
     ?>
 </body>
 </html>
