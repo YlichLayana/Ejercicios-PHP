@@ -2,21 +2,18 @@
 
 function generarHTMLTable($filas, $columnas)
 {
-   
     echo "<table border=2>";
     for ($fila = 1; $fila <= $filas; $fila++) {
         echo "<tr>";
         for ($columna = 1; $columna <= $columnas; $columna++) {
-            
-            echo "<td> &nbsp </td>";
+            $elegido = randomColor();
+            echo "<td style='background-color:$elegido'>  </td>";
         }
         echo "</tr>";
     }
     echo "</table>";
 }
-?> 
 
-<?php
 function randomColor()
 {
     $str = "#";
@@ -58,23 +55,23 @@ function randomColor()
 
     td {
         border: 1px solid #000;
-        background-color: <?php echo randomColor(); ?>;
     }
 </style>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-<?php
-     
 
-    generarHTMLTable(5, 5)
+<body>
+    <?php
+    generarHTMLTable(10, 10)
     ?>
 </body>
+
 </html>
