@@ -1,4 +1,4 @@
-# Ejercicios-PHP-02-
+# Ejercicios-PHP-DAW2-2021
 Estos son Ejercicios de PHP 02
 
 Este repositorio contiene Tareas
