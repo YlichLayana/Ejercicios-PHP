@@ -1,6 +1,6 @@
 <?php
 
-function ListaDiarios()
+function ListaDiariosAleatorio()
 {
     $diarios = array(
         'Marca' => "https://www.marca.com",
@@ -28,6 +28,6 @@ function ListaDiarios()
 </head>
 <body>
 <h2>Diario Aleatorio </h2>
-    <?= ListaDiarios() ?>
+    <?= ListaDiariosAleatorio() ?>
 </body>
 </html>
