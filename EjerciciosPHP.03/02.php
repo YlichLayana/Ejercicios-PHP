@@ -2,11 +2,19 @@
 
 function ListaDiarios()
 {
-    $diarios = array('Marca' => 'yyyy', 'Pais' => 'xxxx', 'El Mundo' => 'oooo', 'La Vanguardia' => 'sssss', 'El ABC' => 'zzzz');
-
+    $diarios = array(
+        'Marca' => "https://www.marca.com",
+        'EL Pais' => '"https://www.elpais.com"',
+        'El Mundo' => "https://www.elmundo.es",
+        'La Vanguardia' => 'https://www.lavanguardia.com/',
+        "La Razón" => "https://www.larazon.es"
+    );
+    echo "<ul>";
+    
     foreach ($diarios as $clave => $valor) {
-        echo "Diario: $clave direccion Web: $valor </br>"; // Muestra los paises con sus capitales
+        echo "<li> <a href=\"$valor\">$clave</a> </li>"; // Muestra los paises con sus capitales
     }
+    echo "</ul>";
 }
 
 
@@ -24,7 +32,8 @@ function ListaDiarios()
 </head>
 
 <body>
-    <?=ListaDiarios()?>
+    <h2>Lista de medios </h2>
+    <?= ListaDiarios() ?>
 </body>
 
 </html>
