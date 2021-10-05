@@ -30,6 +30,10 @@
 
     }
 
+    td{
+       font-size: 7rem;
+    }
+
     footer {
 
         margin-top: 9em;
@@ -78,18 +82,18 @@ function muestraDados($array)
 
 $jugador1 = ValoresDados();
 $jugador2 = ValoresDados();
+$puntos1 = array_sum($jugador1);
+$puntos2 = array_sum($jugador2);
+
 
 function CalculaGanandor($jugadorA, $jugadorB)
 {
-    $sum1 = array_sum($jugadorA);
-    $sum2 = array_sum($jugadorB);
-
-    if ($sum1 == $sum2) {
-        $mensaje = '¡Empate!<br>'. $sum1 . '  -a-  ' . $sum2;
-    } elseif ($sum1 > $sum2) {
-        $mensaje = '¡Ha ganado el jugador 1!<br>'. $sum1 . '  -a-  ' . $sum2;
+    if ($jugadorA == $jugadorB) {
+        $mensaje = '¡Empate!';
+    } elseif ($jugadorA > $jugadorB) {
+        $mensaje = '¡Ha ganado el jugador 1!';
     } else {
-        $mensaje = '¡Ha ganado el jugador 2!<br>'. $sum1 . '  -a-  ' . $sum2;;
+        $mensaje = '¡Ha ganado el jugador 2!';
     }
     return $mensaje;
 }
@@ -114,14 +118,16 @@ function CalculaGanandor($jugadorA, $jugadorB)
         <tbody>
             <tr>
                 <th>Jugador 1</th>
+                <td style="background-color: royalblue"><?= muestraDados($jugador1); ?></td>
+                <th> <?= $puntos1.' Puntos'?></th>
+            </tr>
+            <tr>
                 <th>Jugador 2</th>
+                <td style="background-color:salmon "><?= muestraDados($jugador2); ?></td>
+                <th> <?= $puntos2.' Puntos'?></th>
             </tr>
             <tr>
-                <td style="background-color: royalblue;"><span style="font-size: 7rem"><?= muestraDados($jugador1); ?></span></td>
-                <td style="background-color:salmon "><span style="font-size: 7rem"><?= muestraDados($jugador2); ?></span></td>
-            </tr>
-            <tr>
-                <th colspan="2"><span style="font-size: 1rem"><?= CalculaGanandor($jugador1, $jugador2); ?></th>
+                <th colspan="3"><?= CalculaGanandor($puntos1, $puntos2); ?></th>
             </tr>
         </tbody>
     </table>
