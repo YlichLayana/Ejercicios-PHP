@@ -80,10 +80,17 @@ function muestraDados($array)
     }
 }
 
+function SumaDados($jugador){
+    $puntos= array_sum($jugador)-max($jugador)-min($jugador);  
+    return $puntos;
+}
+
+
+
 $jugador1 = ValoresDados();
 $jugador2 = ValoresDados();
-$puntos1 = array_sum($jugador1);
-$puntos2 = array_sum($jugador2);
+$puntos1 = SumaDados($jugador1);
+$puntos2 = SumaDados($jugador2);
 
 
 function CalculaGanandor($jugadorA, $jugadorB)
