@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="01 dni-estilo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container" style="width: 380px;">
+        <div id="header">
+            <h1>Calculo de la letra del DNI</h1>
+        </div>
+
+        <div id="content">
+            <form action="01 dni.php" method="post">
+                <p>
+                    Introduzca el número del DNI <br>(sin espacios ni puntos) 
+                </p>
+                <p>
+                    <label for="nif">Números DNI: </label>
+                    <input type="number" name="nif" min="1" max="99999999">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar datos" name="enviar">
+                </p>
+                <p>
+                    <input type="reset" value="Restablecer" name="borrado">
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
