@@ -24,8 +24,21 @@ function PalabraMasRepetida($texto)
 
    arsort($palabras); // ordeno por valor 
 
+   foreach ($palabras as $value) {
+      $primeraClave="";
+      //consulto que las palabra al menos se repita dos veces 
+      if ($value > 1) {
+         $primeraClave = array_key_first($palabras);
+         //echo '<br>Palabra más Repetida: => ' . $primeraClave;
+         break;
+      } else {
+         $primeraClave= "no hay palabras que se repitan";
+         break;
+      }
+   }
+   // aqui comentare la linea 41
    //escojo la primera clave o key luego de haber sido ordenada
-   $primeraClave = array_key_first($palabras);
+   //$primeraClave = array_key_first($palabras);
    return $primeraClave;
 }
 
@@ -33,7 +46,7 @@ function LetraMasRepetida($texto)
 {
    $limpiar=strip_tags($texto);
    //variable tipo cadena en la que modifico el texto recibido eliminando espacion y caracteres especiales
-   $nuevaCadena = preg_replace('/[0-9\@\.\;\?\,\" "]+/', '', $texto);
+   $nuevaCadena = preg_replace('/[0-9\@\.\;\?\,\" "]+/', '', $limpiar);
 
    //Dividimos la cadena por carácteres y lo almacenas en un array.
    $arrayLetras = str_split($nuevaCadena);
