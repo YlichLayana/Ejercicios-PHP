@@ -17,9 +17,9 @@
 <table>
 <tr><td>Nº Producto </td> 
  <td>
- <input type="text" 	name="PRODUCTO_NO" 	value="<?=$produc->PRODUCTO_NO ?>"       <?= ($orden == "Detalles" || $orden == "Modificar")?"readonly":"" ?> size="20" autofocus></td></tr>
+ <input type="text" 	name="PRODUCTO_NO" 	value="<?=$produc->PRODUCTO_NO ?>"       <?= ($orden == "Detalles" || $orden == "Modificar" )?"readonly":"" ?> size="20" autofocus></td></tr>
  <tr><td>DESCRIPCION   </td> <td>
- <input type="text" 	name="DESCRIPCION" 	value="<?=$produc->DESCRIPCION  ?>"        <?= ($orden == "Detalles" || $orden == "Modificar")?"readonly":"" ?> size="8"></td></tr>
+ <input type="text" 	name="DESCRIPCION" 	value="<?=$produc->DESCRIPCION  ?>"        <?= ($orden == "Detalles" )?"readonly":"" ?> size="8"></td></tr>
  <tr><td>PRECIO </td> <td>
  <input type="text" name="PRECIO_ACTUAL" 	value="<?=$produc->PRECIO_ACTUAL ?>"        <?= ($orden == "Detalles")?"readonly":"" ?> size=10></td></tr>
  <tr><td>STOCK </td><td>
